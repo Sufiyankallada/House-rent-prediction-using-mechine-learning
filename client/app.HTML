@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House rent Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="img"></div>
+<h1>
+
+<center>HOUSE RENT PREDICTION</center>
+</h1>
+<form class="form">
+	
+	<h2>Place</h2>
+	<div>
+  <select class="location" name="" id="uiplace">
+    <option value="" disabled="disabled" selected="selected">Choose place</option>
+		<option>Kaloor</option>
+        <option>Thrikkakkara</option>
+        <option>Mattanchery</option>
+        <option>Fort kochi</option>
+        <option>Edappally</option>
+  </select> 
+</div>
+	
+	
+	<h2>Area (Square Feet)</h2>
+    <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
+
+    
+
+	<h2>Bathroom</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+		<label for="radio-bath-1">1</label>
+		<input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+		<label for="radio-bath-2">2</label>
+		<input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+		<label for="radio-bath-3">3</label>
+		
+	</div>
+
+    <h2>Total rooms</h2>
+	<div class="switch-field">
+		
+		<input type="radio" id="radio-room-2" name="uirooms" value="6" checked/>
+		<label for="radio-room-2">2</label>
+		<input type="radio" id="radio-room-3" name="uirooms" value="5"/>
+		<label for="radio-room-3">3</label>
+		<input type="radio" id="radio-room-4" name="uirooms" value="4"/>
+		<label for="radio-room-4">4</label>
+		<input type="radio" id="radio-room-5" name="uirooms" value="2"/>
+		<label for="radio-room-5">5</label>
+		
+		
+	</div>
+
+
+    <h2>Power backup</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-power-1" name="uiPowerBackup" value="0"/>
+		<label for="radio-power-1">no</label>
+		<input type="radio" id="radio-power-2" name="uiPowerBackup" value="1" checked/>
+		<label for="radio-power-2">yes</label>
+		
+	</div>
+
+    <h2>Wheelchair available</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-wheel-1" name="uiWheelChair" value="wheelchairnotavailable"/>
+		<label for="radio-wheel-1">no</label>
+		<input type="radio" id="radio-wheel-2" name="uiWheelChair" value="wheelchairavailable" checked/>
+		<label for="radio-wheel-2">yes</label>
+		
+	</div>
+
+    <h2>Pets allowed</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-pet-1" name="uiPetsallowed" value="PetNOTavailable"/>
+		<label for="radio-pet-1">no</label>
+		<input type="radio" id="radio-pet-2" name="uiPetsallowed" value="PetAvailable" checked/>
+		<label for="radio-pet-2">yes</label>
+		
+	</div>
+
+    
+
+    <h2>Parking slots</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-park-4" name="uiParking" value="0"/>
+		<label for="radio-park-4">0</label>
+		
+		<input type="radio" id="radio-park-1" name="uiParking" value="1"/>
+		<label for="radio-park-1">1</label>
+		<input type="radio" id="radio-park-2" name="uiParking" value="2" checked/>
+		<label for="radio-park-2">2</label>
+		
+		
+	</div>
+
+	
+        <h2>Property age</h2>
+	<div>
+  <select class="location" name="" id="uipptyage">
+    <option value="" disabled="disabled" selected="selected">Choose a property age</option>
+		<option>0 to 1 year old</option>
+        <option>1 to 5 year old</option>
+        <option>5 to 10 year old</option>
+        <option>10+ year old</option>
+        
+  </select> 
+</div>
+
+
+
+
+		<h2>Furnishing</h2>
+	<div>
+  <select class="location" name="" id="uifurnishing">
+    <option value="" disabled="disabled" selected="selected">Choose a furnishing</option>
+		<option>Furnished</option>
+        <option>Unfurnished</option>
+        <option>semifurnished</option>
+  </select> 
+</div>
+
+        <h2>Available for</h2>
+	<div>
+  <select class="location" name="" id="uiavailablefor">
+    <option value="" disabled="disabled" selected="selected">choose available for</option>
+		<option>all</option>
+        <option>bachelors</option>
+        <option>family only</option>
+  </select> 
+</div>
+
+
+
+        <h2>Floor type</h2>
+	<div>
+  <select class="location" name="" id="uifloor_type">
+    <option value="" disabled="disabled" selected="selected">Choose a floor_type</option>
+		
+        <option>ceramic</option>
+        
+        <option>granite</option>
+        <option>marble</option>
+        <option>vitrified</option>
+		<option>spartex</option>
+       
+        
+  </select> 
+</div>
+
+	
+
+
+
+	<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+<br>
+</form>
+</body>
+</html>
